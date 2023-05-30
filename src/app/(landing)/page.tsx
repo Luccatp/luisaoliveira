@@ -24,7 +24,8 @@ const page: FC<pageProps> = ({}) => {
             <div className='container flex max-w-[64rem] flex-col items-center gap-4 text-center'>
                 <h1 className='font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl'>Bom desenvolvedor <br/> Utilizando as <span className='text-blue-950 animate-pulse'>melhores <br/> Tecnologias.</span></h1>
                 <p className='max-w-[42rem] leading-normal text-gray-500 sm:text-xl sm:leading-8'>Não existe forma melhor de aprender do que praticando. Por conta disso levo que a consistencia vale mais do que qualquer certificado</p>
-                <Button className='px-10'><Github/> Github </Button>
+                
+                <Link href={"https://github.com/Luccatp/Luccatp"} target='_blank'><Button className='px-10'><Github/> Github </Button></Link>
             </div>
         </section>
         <section className='flex items-center justify-center space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32 bg-slate-100'>
