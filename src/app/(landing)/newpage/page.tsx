@@ -1,6 +1,6 @@
 import HamburguerMenu from '@/components/HamburguerMenu'
 import Button from '@/components/ui/Button'
-import { Activity, AlignRight, ArrowBigRightDash, ArrowRightCircle, Bug, BugIcon, Circle, CircleDot, Dot, File, Home, Loader2, MessageCircle, Phone, PhoneCall, PoundSterling, TrendingUp } from 'lucide-react'
+import { Activity, AlignRight, ArrowBigRightDash, ArrowRightCircle, Bug, BugIcon, Circle, CircleDot, Copyright, Dot, File, Github, Home, Instagram, Linkedin, Loader2, Mail, Medal, MessageCircle, Mic, Phone, PhoneCall, Pin, PoundSterling, TrendingUp } from 'lucide-react'
 import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -34,9 +34,9 @@ const menuLinks = [
 
 const page: FC<pageProps> = ({}) => {
     return(
-        <div className='flex items-center justify-center'>
-            <div className='container max-w-7xl mx-9 flex flex-col'>
-                <nav className='h-10 flex justify-between bg-indigo-950 rounded-2xl my-9 px-4 py-2'>
+        <div className='flex flex-col items-center justify-center'>
+            <div className='container max-w-7xl m-9 flex flex-col'>
+                <nav className='h-10 flex justify-between bg-indigo-800 rounded-2xl my-9 px-4 py-2'>
                     <div className='flex gap-4'>
                         <Activity color='white' className='hidden md:block'/>
                         <h2 className='text-base font-bold text-indigo-50'>Lucca Paradeda</h2>
@@ -46,8 +46,8 @@ const page: FC<pageProps> = ({}) => {
                 <section className='flex items-center md:pl-10'>
                     <div className='flex flex-col items-center md:items-start w-full gap-4'>
                         <h1 className='text-5xl font-bold w-fit relative text-center md:text-left'>Hi, I am <Loader2 className='absolute -right-5 top-0 animate-spin -z-10'/> <br/> <span className='text-indigo-600 animate-pulse'>Lucca </span></h1>
-                        <p className='text-gray-500 max-w-lg text-center md:text-left'>I am a fullstack developer, with emphasis on frontend. Most of my work comes from my experience in brazilian companies and online courses, I am currently persuing my bachaleors degree on software Engeneering at PUCRS university</p>
-                        <Button className='w-fit'>Contact Me <TrendingUp className='ml-2' /></Button>
+                        <p className='text-gray-500 max-w-lg px-6 text-center md:text-left md:px-0'>A fullstack developer, with emphasis on frontend. Most of my work comes from my experience in brazilian companies and online courses, I am currently persuing my bachaleors degree on software Engeneering at PUCRS university</p>
+                        <Link href='https://www.linkedin.com/in/luccaparadeda/' target='_blank'><Button className='w-fit'>Contact Me <TrendingUp className='ml-2' /></Button></Link>
                     </div>
                     <div className='w-full items-center justify-center hidden md:flex'>
                         <Image src={'/storybook.svg'} alt={'storybook image'} width={500} height={500}/>
@@ -76,7 +76,43 @@ const page: FC<pageProps> = ({}) => {
                         </div>
                     </div>
                 </section>
+                <section className='flex flex-col items-center w-full gap-16 md:pl-12'>
+                    <h2 className='text-4xl font-semibold w-full mb-14 text-center md:text-left'>About Me</h2>
+                    <div className='w-full bg-white flex flex-wrap justify-center gap-y-10 gap-x-24'>
+                        <div className='flex flex-col items-center gap-4 w-64'>
+                            <Medal className='h-12 w-12'/>
+                            <span className='text-xl font-bold'>100%</span>
+                            <p className='text-gray-500'>Responsibility</p>
+                        </div>
+                        <div className='flex flex-col items-center gap-4 w-64'>
+                            <Pin className='h-12 w-12'/>
+                            <span className='text-xl font-bold'>Brazil</span>
+                            <p className='text-gray-500'>Porto Alegre</p>
+                        </div>
+                        <div className='flex flex-col items-center gap-4 w-64'>
+                            <Mic className='h-12 w-12'/>
+                            <span className='text-xl font-bold'>Bilingual</span>
+                            <p className='text-gray-500 text-center'>English / Portuguese</p>
+                        </div>
+                    </div>
+                </section>
             </div>
+            <footer className='w-full h-44 bg-indigo-800 mt-32 border-t-8 border-indigo-900 rounded-t-lg'>
+                <div className='flex flex-col gap-6 items-center justify-center h-full'> 
+                    <div className='flex gap-16'>
+                        <Link href='https://github.com/Luccatp/Luccatp' className='text-2xl text-indigo-100 hover:text-indigo-400'>
+                            <Github className='h-12 w-12'/>
+                        </Link>
+                        <Link href='https://www.linkedin.com/in/luccaparadeda/' className='text-2xl text-indigo-100 hover:text-indigo-400'>
+                            <Linkedin className='h-12 w-12'/>
+                        </Link>
+                        <Link href='https://www.instagram.com/luccaparadeda/' className='text-2xl text-indigo-100 hover:text-indigo-400'>
+                            <Instagram className='h-12 w-12'/>
+                        </Link>
+                    </div>
+                    <span className='text-xs w-full text-center text-gray-200'>lucca tisser paradeda © {new Date().getFullYear()}</span>
+                </div>
+            </footer>
         </div>
     )
 }
