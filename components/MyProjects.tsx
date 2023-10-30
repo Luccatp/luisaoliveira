@@ -4,7 +4,13 @@ import ProjectCard, { ProjectCardProps } from "./ProjectCard";
 interface MyProjectsProps {}
 
 const mockProjects: ProjectCardProps[] = [
-  //crie varios objetos com as propriedades de ProjectCardProps
+  {
+    projectTitle: "Personal Blog",
+    projectDescription:
+      "My blog where I teach about frontend development and other things I like.",
+    projectTags: ["Blog", "Full-stack", "Headless CMS", "Next13"],
+    link: "https://blog.luccaparadeda.com/",
+  },
   {
     projectTitle: "PHdaquimica",
     projectDescription:
