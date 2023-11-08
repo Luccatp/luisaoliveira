@@ -28,7 +28,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
           "flex flex-col items-end w-4/5 gap-10 border-t-[1px] pt-10 border-primary sm:border-t-0 sm:pt-0"
         }
       >
-        <div className="hidden sm:block">
+        <div className="hidden sm:block w-full ">
           <BouncingLine />
         </div>
         <div className={"flex flex-col gap-3 w-full justify-center"}>
